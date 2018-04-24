@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.5.12.RELEASE</version>
 	</parent>
 
 	<properties>
@@ -20,14 +20,8 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 
-		<version.junit.junit>4.12</version.junit.junit>
 		<version.org.jmockit.jmockit>1.30</version.org.jmockit.jmockit>
-		<version.com.lazerycode.jmeter>2.1.0</version.com.lazerycode.jmeter>
-
-		<version.org.slf4j>1.7.25</version.org.slf4j>
-		<version.ch.qos.logback>1.2.3</version.ch.qos.logback>
-
-		<version.joda.time>2.9.7</version.joda.time>
+		<version.com.lazerycode.jmeter>2.7.0</version.com.lazerycode.jmeter>
 
 		<version.org.webjars.bootstrap>3.3.7-1</version.org.webjars.bootstrap>
 		<version.org.webjars.jquery>3.1.1</version.org.webjars.jquery>
@@ -118,7 +112,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<jmeterVersion>3.1</jmeterVersion>
+					<jmeterVersion>4.0</jmeterVersion>
 					<testFilesDirectory>jmeter/tests/</testFilesDirectory>
 				</configuration>
 			</plugin>
@@ -171,7 +165,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${version.junit.junit}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -184,19 +177,16 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${version.org.slf4j}</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>${version.ch.qos.logback}</version>
 		</dependency>
 
 		<!-- Time library -->
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>${version.joda.time}</version>
 		</dependency>
 	</dependencies>
 
