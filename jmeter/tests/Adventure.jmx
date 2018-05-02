@@ -13,9 +13,9 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="projectHome" elementType="Argument">
-            <stringProp name="Argument.name">projectHome</stringProp>
-            <stringProp name="Argument.value">/Users/ars/Repositories/tecnico-softeng/aula-jmeter</stringProp>
+          <elementProp name="testHome" elementType="Argument">
+            <stringProp name="Argument.name">testHome</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="brokerServer" elementType="Argument">
@@ -32,7 +32,7 @@
       </Arguments>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Define Broker Data" enabled="true">
-        <stringProp name="filename">${projectHome}/jmeter/data/broker.txt</stringProp>
+        <stringProp name="filename">${testHome}/broker.txt</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">brokerCode,brokerName</stringProp>
         <stringProp name="delimiter">,</stringProp>
@@ -44,7 +44,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Define Adventure Data" enabled="true">
-        <stringProp name="filename">${projectHome}/jmeter/data/adventure.txt</stringProp>
+        <stringProp name="filename">${testHome}/adventure.txt</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">brokerId,begin,end,age,iban,amount</stringProp>
         <stringProp name="delimiter">,</stringProp>
@@ -56,7 +56,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Define Adventure ID Data" enabled="true">
-        <stringProp name="filename">${projectHome}/jmeter/data/adventureId.txt</stringProp>
+        <stringProp name="filename">${testHome}/adventureId.txt</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">brokerId,adventureId</stringProp>
         <stringProp name="delimiter">,</stringProp>
@@ -281,7 +281,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">/Users/ars/Repositories/tecnico-softeng/aula-jmeter/target/jmeter/results/20180425-Adventure.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
