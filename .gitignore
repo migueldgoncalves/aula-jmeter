@@ -9,3 +9,5 @@ jmeter.log
 *.hprof
 infer-out
 .DS_Store
+.idea/
+*.iml
